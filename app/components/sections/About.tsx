@@ -12,8 +12,8 @@ export default function About() {
   const [activeTab, setActiveTab] = useState<"bio" | "education" | "philosophy">("bio");
 
   // Pengamanan pembacaan teks deskripsi
-  const description = personal.description
-    ? personal.description.replace(/Tuusame/g, "I Putu Aksama Putra")
+  const description = personal.aboutDescription
+    ? personal.aboutDescription.replace(/Tuusame/g, "I Putu Aksama Putra")
     : "";
 
   return (
@@ -91,7 +91,7 @@ export default function About() {
               {activeTab === "bio" && (
                 <div className="grid gap-8 lg:grid-cols-12 lg:items-center animate-fadeIn">
                   <div className="space-y-4 lg:col-span-7">
-                    <p className="text-base md:text-lg leading-relaxed text-zinc-800 font-medium tracking-wide">
+                    <p className="text-justify text-base md:text-lg leading-relaxed text-zinc-800 font-medium tracking-wide">
                       {description}
                     </p>
 
@@ -100,7 +100,7 @@ export default function About() {
                         💡 Problem Solver
                       </span>
                       <span className="rounded-md border border-zinc-300 bg-zinc-200/50 px-2.5 py-1 text-xs font-semibold text-zinc-700">
-                        🚀 Fast Learner
+                        🚀 Learner
                       </span>
                       <span className="rounded-md border border-zinc-300 bg-zinc-200/50 px-2.5 py-1 text-xs font-semibold text-zinc-700">
                         🎯 Detail-Oriented
@@ -145,8 +145,9 @@ export default function About() {
                     <h4 className="mt-2 text-xl font-black text-zinc-950">
                       Universitas Pendidikan Ganesha (UNDIKSHA)
                     </h4>
-                    <p className="mt-2 text-sm text-zinc-700 font-medium leading-relaxed">
-                      Fokus pada pengembangan aplikasi web modern (Full-Stack), perancangan sistem, serta algoritma Kecerdasan Buatan / Machine Learning (Computer Vision & Classification).
+                    {/* Menggunakan text-justify juga di paragraf Education */}
+                    <p className="mt-2 text-justify text-sm text-zinc-700 font-medium leading-relaxed">
+                        Dengan Peminatan Sistem Cerdas dengan Fokus pada pengembangan aplikasi web modern (Full-Stack), perancangan sistem, serta algoritma Machine Learning & Deep Learning (Computer Vision, Clasification, Custering, Analysis Sentiment & Segmentation).
                     </p>
                   </div>
                 </div>
@@ -154,8 +155,6 @@ export default function About() {
 
             </div>
 
-            {/* Subtle Inner Footer */}
-          
           </div>
         </div>
       </Container>

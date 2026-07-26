@@ -76,9 +76,9 @@ export default function Contact() {
               </span>
             </div>
 
-            {/* Menggunakan personal.description */}
-            <p className="text-xs leading-relaxed font-medium text-zinc-600 max-w-md">
-              {personal.description}
+            {/* Kalimat Ajakan Kolaborasi */}
+            <p className="text-xs text-justify leading-relaxed font-medium text-zinc-600 max-w-md">
+              Punya ide proyek menarik atau butuh partner kolaborasi? Saya siap membantu merancang dan membangun solusi digital modern berbasis <span className="font-semibold text-zinc-900">Web Development</span> maupun mengintegrasikan sistem cerdas <span className="font-semibold text-zinc-900">Machine Learning & Computer Vision</span>. Mari terhubung dan diskusikan ide Anda!
             </p>
 
             {/* Bulatan Sosial Media */}

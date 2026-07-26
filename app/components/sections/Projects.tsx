@@ -3,17 +3,24 @@
 import { useState } from "react";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
+
 import projects, { Project } from "@/app/data/projects";
+import { socials } from "@/app/data/social"; // Named export { socials }
 
 import Container from "../ui/Container";
 import Section from "../ui/Section";
 import SectionDivider from "../ui/SectionDivider";
 
 import { HiOutlineFolderOpen } from "react-icons/hi2";
-import { FiExternalLink, FiGithub, FiCheckCircle } from "react-icons/fi";
+import { FiExternalLink, FiGithub, FiCheckCircle, FiArrowUpRight } from "react-icons/fi";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project>(projects[0]);
+
+  // Mencari URL GitHub secara otomatis dari array socials
+  const githubUrl =
+    socials.find((s) => s.name.toLowerCase() === "github")?.url ||
+    "https://github.com/IPutuAksamaPutra";
 
   return (
     <Section
@@ -167,7 +174,7 @@ export default function Projects() {
 
               {/* Scroll Container List Proyek */}
               <div 
-                className="no-scrollbar flex flex-col gap-2.5 max-h-[440px] sm:max-h-[480px] overflow-y-auto pr-1"
+                className="no-scrollbar flex flex-col gap-2.5 max-h-[400px] sm:max-h-[420px] overflow-y-auto pr-1"
                 style={{ scrollbarWidth: "thin", scrollbarColor: "#d4d4d8 transparent" }}
               >
                 {projects.map((project) => {
@@ -232,6 +239,20 @@ export default function Projects() {
                     </button>
                   );
                 })}
+              </div>
+
+              {/* Tombol "Lihat Semua Proyek di GitHub" */}
+              <div className="mt-4 pt-2">
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex w-full items-center justify-center gap-2 rounded-2xl border border-zinc-300/80 bg-white py-3 px-4 text-xs font-bold text-zinc-800 shadow-2xs transition-all duration-200 hover:border-zinc-950 hover:bg-zinc-950 hover:text-amber-400 hover:shadow-md"
+                >
+                  <FiGithub className="h-4 w-4 transition-transform group-hover:scale-110" />
+                  <span>Lihat Semua Proyek di GitHub</span>
+                  <FiArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
               </div>
 
             </div>

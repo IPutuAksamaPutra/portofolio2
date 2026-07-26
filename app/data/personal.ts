@@ -3,15 +3,20 @@ const personal = {
   nickname: "TuuSame",
   role: "Junior Full-Stack Web Developer & AI Enthusiast",
 
-  description:
-    "Saya adalah mahasiswa Ilmu Komputer di Universitas Pendidikan Ganesha (UNDIKSHA) yang berfokus pada Web Development serta Machine Learning, Deep Learning dan Computer Vision.",
+  // Deskripsi ringkas & profesional untuk bagian Hero
+  heroDescription:
+    "Mengembangkan aplikasi web modern yang responsif dan mengintegrasikan sistem cerdas berbasis Machine Learning, Deep Learning, serta Computer Vision.",
 
-  email: "aksputraxb@gmail.com", // 👈 Jangan lupa ganti dengan email aslimu
-  phone: "+6285857336765", // 👈 Jangan lupa ganti dengan nomor WhatsApp aslimu
+  // Deskripsi lengkap & mendalam untuk bagian About
+  aboutDescription:
+    "Saya adalah seorang mahasiswa yang berfokus pada pengembangan teknologi modern, khususnya Full-Stack Web Development dan Artificial Intelligence. Berpengalaman dalam merancang arsitektur web yang scalable serta mengimplementasikan berbagai model Machine Learning & Deep Learning. Saya selalu bersemangat untuk mempelajari teknologi baru, memecahkan masalah kompleks, dan mengeksplorasi ide-ide inovatif melalui berbagai proyek.",
+
+  email: "aksputraxb@gmail.com",
+  phone: "---",
 
   location: "Bali, Indonesia",
 
-  cv: "/cv.pdf", // 👈 Pastikan file cv.pdf ada di folder public/cv.pdf
+  cv: "/cv.pdf",
   avatar: "/images/pp.jpg",
 };
 

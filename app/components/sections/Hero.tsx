@@ -47,8 +47,8 @@ export default function Hero() {
                     strings: [
                       "JUNIOR FULL-STACK DEVELOPER",
                       "AI ENTHUSIAST",
-                      "Computer Vision",
-                      "COMPUTER SCIENCE STUDENT",
+                      "MACHINE LEARNING & DEEP LEARNING",
+                      "COMPUTER VISION",
                     ],
                     autoStart: true,
                     loop: true,
@@ -59,9 +59,9 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* Description Paragraph */}
-            <p className="mb-8 max-w-xl text-sm font-medium leading-relaxed text-zinc-600 sm:text-base">
-              {personal.description}
+            {/* Description Paragraph (Menggunakan heroDescription) */}
+            <p className="mb-8 max-w-xl text-sm text-justify font-medium leading-relaxed text-zinc-600 sm:text-base">
+              {personal.heroDescription}
             </p>
 
             {/* CTA Action Buttons */}
@@ -89,8 +89,21 @@ export default function Hero() {
           <div className="flex justify-center lg:col-span-5 lg:justify-end">
             <div className="relative">
 
-              {/* Decorative Circle Line Overlay */}
+              {/* Decorative Circle Line Overlay (Searah Jarum Jam) */}
               <div className="absolute -inset-4 rounded-full border-2 border-dashed border-amber-500/40 animate-[spin_60s_linear_infinite]" />
+
+              {/* Container Floating Orbit Badges (Berputar Berlawanan Arah Jam) */}
+              <div className="absolute -inset-4 rounded-full pointer-events-none animate-[spin_40s_linear_infinite_reverse]">
+                {/* Badge ⚡ (Atas Kanan) */}
+                <div className="absolute top-2 right-2 flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-xs text-amber-400 shadow-md">
+                  🧠
+                </div>
+
+                {/* Badge 💻 (Bawah Kiri) */}
+                <div className="absolute bottom-2 left-2 flex h-10 w-10 items-center justify-center rounded-full bg-amber-500 text-xs text-zinc-950 font-bold shadow-md">
+                  💻
+                </div>
+              </div>
 
               {/* Main Avatar Wrapper */}
               <div className="relative h-64 w-64 sm:h-80 sm:w-80 overflow-hidden rounded-full border-4 border-zinc-100 bg-zinc-200 shadow-xl">
@@ -102,14 +115,6 @@ export default function Hero() {
                   sizes="(max-width: 640px) 256px, 320px"
                   className="object-cover transition-transform duration-500 hover:scale-105"
                 />
-              </div>
-
-              {/* Floating Orbit Badges / Icons */}
-              <div className="absolute -right-2 top-8 flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-xs text-amber-400 shadow-md">
-                ⚡
-              </div>
-              <div className="absolute -left-2 bottom-12 flex h-10 w-10 items-center justify-center rounded-full bg-amber-500 text-xs text-zinc-950 font-bold shadow-md">
-                💻
               </div>
 
             </div>

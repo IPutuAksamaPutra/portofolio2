@@ -5,14 +5,14 @@ export const socials = [
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/username",
+    url: "https://linkedin.com/in/",
   },
   {
     name: "Instagram",
-    url: "https://instagram.com/username",
+    url: "https://instagram.com/",
   },
   {
     name: "Email",
-    url: "mailto:your@email.com",
+    url: "mailto:aksputraxb@gmail.com",
   },
 ];
